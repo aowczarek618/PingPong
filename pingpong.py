@@ -4,27 +4,21 @@ import random
 
 class Paddle(turtle.Turtle):
 
-    def __init__(self, coordinates, movement_speed=60):
+    def __init__(self, coordinates, movement_speed=60, strech_wid=5):
         super().__init__()
         self.speed(0)
         self.shape("square")
         self.color("white")
-        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.shapesize(stretch_wid=strech_wid, stretch_len=1)
         self.penup()
         self.goto(coordinates)
         self.movement_speed = movement_speed
 
-    def move_up(self):
-        self.sety(self.ycor() + self.movement_speed)
-
-    def move_down(self):
-        self.sety(self.ycor() - self.movement_speed)
-
 
 class Ball(turtle.Turtle):
 
-    speed_parametr = 0.00002
-    initial_speed = 0.1
+    speed_parametr = 0.01
+    initial_speed = 5
 
     def __init__(self, coordinates):
         super().__init__()
