@@ -1,6 +1,8 @@
 # PingPong
 Ping pong game in Python
 
-I have written this game thanks to that youtube tutorial https://youtu.be/C6jJg9Zan7w. I added my own
-improvements, for example I used object-oriented programming to write this app instead of procedural programming.
-I also implemented computer player to my game.
+I have written this game thanks to that youtube tutorial https://youtu.be/C6jJg9Zan7w. 
+I added my own improvements:
+* Object-oriented approach instead of procedural,
+* Computer player implementation,
+* Speeding up the ball in real time for better gameplay.

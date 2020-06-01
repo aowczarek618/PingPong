@@ -40,7 +40,7 @@ def main():
     Creating a game screen.
     """
     wn = turtle.Screen()
-    wn.title("Ping Pong by @TokyoEdTech")
+    wn.title("Ping Pong by @aowczarek618")
     wn.bgcolor("black")
     wn.setup(width=WIDTH, height=HEIGHT)
     wn.tracer(0)
