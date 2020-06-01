@@ -28,7 +28,7 @@ def main():
     """
     Checking a platform type (Linux, Mac OS) to choose a proper play sound command.
     If you want to play sound on Windows you have to import winsound module and use
-    winsound.PlaySound("bounce.wav", winsound.SND_ASYNC) function then. Unfortunately I can't do it on Linux.
+    winsound.PlaySound("bounce.wav", winsound.SND_ASYNC) function then. Unfortunately it can't be done on Linux.
     """
     if sys.platform == "Linux":
         play_sound = "aplay -q bounce.wav&"
