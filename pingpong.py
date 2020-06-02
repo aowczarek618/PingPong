@@ -1,8 +1,9 @@
-import turtle
 import random
+import turtle
 
 
 class Paddle(turtle.Turtle):
+    """Paddle class"""
 
     def __init__(self, coordinates, movement_speed=60, strech_wid=5):
         super().__init__()
@@ -16,7 +17,7 @@ class Paddle(turtle.Turtle):
 
 
 class Ball(turtle.Turtle):
-
+    """Ball class"""
     speed_parametr = 0.01
     initial_speed = 5
 
@@ -28,25 +29,28 @@ class Ball(turtle.Turtle):
         self.penup()
         self.goto(coordinates)
 
-        self.dx = random.uniform(-self.initial_speed, self.initial_speed)
-        self.dy = random.uniform(-self.initial_speed, self.initial_speed)
+        self.delta_x = random.uniform(-self.initial_speed, self.initial_speed)
+        self.delta_y = random.uniform(-self.initial_speed, self.initial_speed)
 
     def move(self):
-        self.setx(self.xcor() + self.dx)
-        self.sety(self.ycor() + self.dy)
+        """Method responsible for moving the ball"""
+        self.setx(self.xcor() + self.delta_x)
+        self.sety(self.ycor() + self.delta_y)
 
     def reset(self):
-        self.dx = random.uniform(-self.initial_speed, self.initial_speed)
-        self.dy = random.uniform(-self.initial_speed, self.initial_speed)
+        """Method resets the ball position and speed"""
+        self.delta_x = random.uniform(-self.initial_speed, self.initial_speed)
+        self.delta_y = random.uniform(-self.initial_speed, self.initial_speed)
         self.goto((0, 0))
 
     def speed_up(self):
-        if self.dx > 0:
-            self.dx += self.speed_parametr
+        """Method speeds up the ball"""
+        if self.delta_x > 0:
+            self.delta_x += self.speed_parametr
         else:
-            self.dx -= self.speed_parametr
+            self.delta_x -= self.speed_parametr
 
-        if self.dy > 0:
-            self.dy += self.speed_parametr
+        if self.delta_y > 0:
+            self.delta_y += self.speed_parametr
         else:
-            self.dy -= self.speed_parametr
+            self.delta_y -= self.speed_parametr
