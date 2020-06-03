@@ -4,20 +4,21 @@ import pingpong
 
 
 class Player:
-    """Player class"""
+    """Player class. Players has a paddle object attribute which can be moved by players."""
 
-    def __init__(self, coordinates):
+    def __init__(self, coordinates, movement_speed=60):
         self.score = 0
         self.reaction_range = 0
         self.paddle = pingpong.Paddle(coordinates=coordinates)
+        self.movement_speed = movement_speed
 
     def move_up(self):
         """Method moves up the player's paddle"""
-        self.paddle.sety(self.paddle.ycor() + self.paddle.movement_speed)
+        self.paddle.sety(self.paddle.ycor() + self.movement_speed)
 
     def move_down(self):
         """Method moves down the player's paddle"""
-        self.paddle.sety(self.paddle.ycor() - self.paddle.movement_speed)
+        self.paddle.sety(self.paddle.ycor() - self.movement_speed)
 
 
 class ComputerPlayer(Player):

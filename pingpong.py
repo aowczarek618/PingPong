@@ -3,9 +3,9 @@ import turtle
 
 
 class Paddle(turtle.Turtle):
-    """Paddle class"""
+    """Paddle class: making a paddle object on the screen at given coordinates"""
 
-    def __init__(self, coordinates, movement_speed=60, strech_wid=5):
+    def __init__(self, coordinates, strech_wid=5):
         super().__init__()
         self.speed(0)
         self.shape("square")
@@ -13,11 +13,10 @@ class Paddle(turtle.Turtle):
         self.shapesize(stretch_wid=strech_wid, stretch_len=1)
         self.penup()
         self.goto(coordinates)
-        self.movement_speed = movement_speed
 
 
 class Ball(turtle.Turtle):
-    """Ball class"""
+    """Ball class: making a ball object on the screen with certain speed."""
     speed_parametr = 0.01
     initial_speed = 5
 

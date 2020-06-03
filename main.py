@@ -46,7 +46,7 @@ def main():
     window.tracer(0)
 
     # Creating players.
-    player1 = players.HumanPlayer(coordinates=(-350, 0))
+    player1 = players.Player(coordinates=(-350, 0))
     player2 = players.ComputerPlayer(coordinates=(350, 0))
 
     # Creating a ball.
@@ -63,11 +63,11 @@ def main():
 
     # Keyboard bindings.
     window.listen()
-    if isinstance(player1, players.HumanPlayer):
+    if isinstance(player1, players.Player):
         window.onkeypress(player1.move_up, 'w')
         window.onkeypress(player1.move_down, 's')
 
-    if isinstance(player2, players.HumanPlayer):
+    if isinstance(player2, players.Player):
         window.onkeypress(player2.move_up, 'Up')
         window.onkeypress(player2.move_down, 'Down')
 
